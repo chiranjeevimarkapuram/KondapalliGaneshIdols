@@ -67,7 +67,7 @@ Order Process
 
 Customers can directly place orders through WhatsApp by clicking the "Order on WhatsApp" button available on the 2025 Collection page.
 
-🎯 Purpose of the Project
+Purpose of the Project
 
 This project was developed to:
 

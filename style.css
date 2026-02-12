@@ -1,0 +1,470 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1060;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.nav-logo {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+@media (max-width: 576px) {
+    .nav-logo {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+/* Trendy Link Styling */
+.navbar-nav .nav-link {
+    position: relative;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin: 0 8px;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background: #ffc107;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffc107 !important;
+    transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link.active {
+    color: #ffc107 !important;
+    border-bottom: 2px solid #ffc107;
+}
+
+/* Apply pill-style link buttons for laptop/desktop */
+@media (min-width: 769px) {
+    .navbar-nav .nav-link {
+        padding: 0.45rem 0.9rem !important;
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 999px;
+        color: inherit !important;
+        font-weight: 600;
+        transition: all 0.25s ease;
+        margin: 0 6px;
+    }
+
+    .navbar-nav .nav-link:hover {
+        background: rgba(255, 193, 7, 0.12) !important;
+        color: #ffc107 !important;
+        transform: translateY(-2px);
+    }
+
+    .navbar-nav .nav-link {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
+
+/* Carousel Styling */
+.carousel {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-image {
+    max-height: 500px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Product images on thisyear page */
+.product-image {
+    max-height: 260px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Google Map Container Styling */
+.map-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Image rotation animation */
+.carousel-item img {
+    animation: imageRotate 0.6s ease-in-out;
+}
+
+@keyframes imageRotate {
+    from {
+        transform: rotateY(-10deg) rotateX(5deg) scale(0.95);
+        opacity: 0.8;
+    }
+
+    to {
+        transform: rotateY(0) rotateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    width: auto;
+    height: auto;
+    background: none;
+    border: none;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    background: rgba(255, 193, 7, 0.8);
+    transform: scale(1.1);
+}
+
+/* Content Box Styling */
+.content-box {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-left: 4px solid #ffc107;
+}
+
+.content-box:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.content-box h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.content-box h2::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #ffc107, transparent);
+    bottom: 0;
+    left: 0;
+}
+
+.content-box p {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Footer Styling */
+footer {
+    background: linear-gradient(135deg, #343a40 0%, #23282c 100%);
+    color: white;
+    margin-top: 3rem;
+    border-top: 3px solid #ffc107;
+}
+
+footer p {
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Container & General Spacing */
+.container {
+    max-width: 1200px;
+}
+
+main {
+    min-height: calc(100vh - 200px);
+}
+
+/* Smooth Transitions */
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Button Styling */
+.btn {
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffc107;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffb300;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - TABLET (992px and below)
+   ================================================ */
+@media (max-width: 992px) {
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+
+    .navbar-nav .nav-link {
+        margin: 0 4px;
+    }
+
+    .carousel-image {
+        max-height: 400px;
+    }
+
+    .content-box {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .content-box h2 {
+        font-size: 1.4rem;
+    }
+
+    main.container {
+        padding: 1rem;
+    }
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - MOBILE (768px and below)
+   Navigation always visible (no toggle)
+   ================================================ */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .navbar-toggler {
+        display: none !important;
+    }
+
+    /* Always display navbar collapse */
+    .navbar-collapse {
+        display: flex !important;
+        position: static !important;
+        background: transparent;
+        padding: 0 !important;
+        border: none;
+        margin-top: 0.5rem;
+    }
+
+    .navbar-collapse .navbar-nav {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 0.4rem;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 0.5rem;
+    }
+
+    .navbar-collapse .nav-item {
+        margin: 0;
+    }
+
+    .navbar-collapse .nav-link {
+        display: inline-block;
+        padding: 0.5rem 1rem !important;
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 999px;
+        color: #2c3e50 !important;
+        font-weight: 600;
+        font-size: 0.95rem;
+        white-space: nowrap;
+        margin: 0 2px;
+    }
+
+    .navbar-collapse .nav-link::after {
+        display: none;
+    }
+
+    .navbar-collapse .nav-link:hover {
+        background: rgba(255, 193, 7, 0.12) !important;
+        color: #ffc107 !important;
+    }
+
+    .carousel-image {
+        max-height: 350px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .content-box {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .content-box h2 {
+        font-size: 1.3rem;
+    }
+
+    .content-box p {
+        font-size: 0.95rem;
+    }
+
+    main.container {
+        padding: 1rem;
+    }
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - SMALL MOBILE (576px and below)
+   ================================================ */
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .nav-logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .carousel-image {
+        max-height: 250px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .content-box {
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    .content-box h2 {
+        font-size: 1.2rem;
+    }
+
+    .content-box p {
+        font-size: 0.9rem;
+    }
+
+    .product-image {
+        max-height: 200px;
+    }
+
+    main h1 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - LANDSCAPE
+   ================================================ */
+@media (max-height: 600px) and (orientation: landscape) {
+    .carousel-image {
+        max-height: 300px;
+    }
+
+    .content-box {
+        padding: 1rem;
+    }
+
+    main.container {
+        margin-top: 0.5rem;
+    }
+
+    .navbar-brand {
+        font-size: 1rem;
+    }
+}

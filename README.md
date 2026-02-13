@@ -40,10 +40,9 @@ Cultural and eco-friendly theme
 Technologies Used
 
 HTML5
-
 CSS3
-
 Bootstrap 5
+GEN AI
 
 WhatsApp API Link Integration
 
@@ -58,7 +57,6 @@ KondapalliGaneshIdols/
 └── images/           # Product images
 
 Location
-
 Kummari Bazar,
 Kondapalli, NTR District,
 Andhra Pradesh, India
@@ -81,11 +79,11 @@ Create a beginner-level portfolio project
 
 Future Improvements
 
-Add contact form with backend integration
-
 Improve UI with advanced styling
 
 Add product filtering and categories
+
+Add 3D Animation Image Style 
 
 Deploy using GitHub Pages
 
